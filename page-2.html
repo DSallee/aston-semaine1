@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Cours 2 - Semaine 1</title>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="wrapper">
+        <header>
+            <h1>Aston-Ecole - Semaine 1: Bower-Grunt-Compass</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Les indispensables d'un Développeur Web</a></li>
+                    <li><a href="page-2.html">Versionner un projet en équipe</a></li>    
+                    <li><a href="page-3.html">Compass | Framework CSS</a></li>
+                    <li><a href="page-4.html">Configuration SSH / GitHub et BitBucket</a></li>
+                    <li><a href="page-5.html">Rappel pour soumettre une branche</a></li>
+                </ul>
+            </nav>
+        </header>
+		<main>
+			<div class="chapitre">
+				<h2>Versionner un projet en équipe</h2>
+			</div>
+			<div class="content">
+				<h3>Ordre des commandes de Versionning</h3>
+				<ul>
+					<li class="cmdList"><code class="code">git init</code> se lance 1 seule fois par projet, créé le fichier .git </li>
+					<li class="cmdList"><code class="code">git status</code> indique l'état</li>
+					<li class="cmdList"><code class="code">git add</code> traque les modifications, les versions</li>
+					<li class="cmdList"><code class="code">git commit -m "message_name"</code> valide les modifications, les versions</li>
+					<li class="cmdList"><code class="code">git push -u origin master</code> envoi sur le cloud GitHub</li>
+				</ul>
+				<h3>Rappel des commandes de base</h3>
+				<ul>
+					<li class="cmdList"><code class="code">cd</code> change de répertoire.</li>
+					<li class="cmdList"><code class="code">ls</code> contenu du répertoire.</li>
+					<li class="cmdList"><code class="code">mkdir</code> créé un répertoire.</li>
+					<li class="cmdList"><code class="code">rmdir</code> supprime un répertoire.</li>
+					<li class="cmdList"><code class="code">touch</code> créé un fichier.</li>
+					<li class="cmdList"><code class="code">ll</code> list all (ls-al) liste tout.</li>
+					<li class="cmdList"><code class="code">rm</code> supprime.</li>
+				</ul>
+				<h3>Créer son projet en local</h3>
+				<ul>
+					<li class="cmdList"><code class="code">sudo mkdir -p /var/www/html</code></li>
+					<li class="cmdList"><code class="code">cd /var/www/html</code></li>
+					<li class="cmdList"><code class="code">sudo chmod -R 777 .</code></li>
+					<li class="cmdList"><code class="code">mkdir project_name</code></li>
+					<li class="cmdList"><code class="code">cd project_name</code></li>
+					<li class="cmdList"><code class="code">touch index.html</code></li>
+					<li class="cmdList"><code class="code">subl.</code></li>
+				</ul>
+				<h3>Versionner son projet sur GitHub</h3>
+				<ul>
+					<li class="cmdList"><code class="code">git init</code></li>
+					<li class="cmdList"><code class="code">git add index.html</code></li>
+					<li class="cmdList"><code class="code">git commit -m "initialize repository"</code></li>
+					<li class="cmdList"><code class="code">git push -u origin master</code></li>
+				</ul>
+				<p>Dans GitHub &rarr; Add repository &rarr; Create</p>
+				<ul>
+					<li class="cmdList"><code class="code">git remote origin...</code></li>
+					<li class="cmdList"><code class="code">git push origin master</code></li>
+				</ul>
+				<p>
+					F5 Dans GitHub &rarr; Repository initialized<br>
+					&rarr; Merge / Confirm<br>
+					ou<br>
+					&rarr; Delete branch
+				</p>
+				<ul>
+					<li class="cmdList"><code class="code">git status</code></li>
+					<li class="cmdList"><code class="code">git checkout master</code></li>
+					<li class="cmdList"><code class="code">git branch</code></li>
+					<li class="cmdList"><code class="code">git branch -d new-branch</code> Demande si sur d'effacer? Non</li>
+					<li class="cmdList"><code class="code">git pull -r origin master</code></li>
+					<li class="cmdList"><code class="code">git branch -d new-branch</code></li>
+				</ul>
+		        <h3>Gérer les conflits</h3>
+		        <h4>Situation où 2 personnes modifient le même fichier en même temps</h4>
+		        <li>1er Cas: modification sur GitHub</li>
+		        <p>
+		            Dans GitHub &rarr; via l'onglet <strong>&lsaquo; code &rsaquo;</strong><br>
+		            - Modifier le code<br>
+		            - Commit changes<br>
+		            &rarr; update index.html (par exemple)<br>
+		            <span class="validation">Commit changes</span>
+		        </p>
+		        <li>2e Cas: modification sur SublimeText (ou autre)</li>
+		        <p>Pour corriger les conflits, on efface les caractères spéciaux accompagner de HEAD et master + les modifications qu'on ne veut pas.</p>
+		        <h3>Après avoir corriger les conflits</h3>
+		        <p>Dans le Terminal:</p>
+		        <ul>
+		            <li class="descriptList">Merger une branche au Master après les modifications (on merge la branche depuis Master):</li>
+		            <ul>
+		                <li class="cmdList"><code class="code">git checkout master</code></li>
+		                <li class="cmdList"><code class="code">git merge branch_name</code></li>
+		            </ul>
+		            <li class="descriptList">Une branche merger ne sert plus à rien. Il faut donc l'effacer:</li>
+		            <ul>
+		                <li class="cmdList"><code class="code">git branch -d branch_name</code> Demande si sur d'effacer? Non</li>
+		                <li class="cmdList"><code class="code">git push origin master :branch_name</code></li>
+		            </ul>
+		        </ul>
+		    </div>
+	    </main>
+	</div>
+</body>
+</html>
+

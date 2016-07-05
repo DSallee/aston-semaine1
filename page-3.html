@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Cours 3 - Semaine 1</title>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="wrapper">
+        <header>
+            <h1>Aston-Ecole - Semaine 1: Bower-Grunt-Compass</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Les indispensables d'un Développeur Web</a></li>
+                    <li><a href="page-2.html">Versionner un projet en équipe</a></li>    
+                    <li><a href="page-3.html">Compass | Framework CSS</a></li>
+                    <li><a href="page-4.html">Configuration SSH / GitHub et BitBucket</a></li>
+                    <li><a href="page-5.html">Rappel pour soumettre une branche</a></li>
+                </ul>
+            </nav>
+        </header>
+		<main>
+			<div class="chapitre">
+				<h2>Compass | Framework CSS</h2>
+			</div>
+			<div class="content">
+				<h3>Installation de Ruby</h3>
+				<ul>
+					<li class="cmdList"><code class="code">sudo apt-get install ruby-full</code></li>
+					<li class="cmdList"><code class="code">gem -v</code> affiche la version de Ruby</li>
+				</ul>
+				<h3>Installation de Compass</h3>
+				<ul>
+					<li class="cmdList"><code class="code">sudo gem install compass</code></li>
+					<li class="cmdList"><code class="code">cd /var/www/html</code></li>
+					<li class="cmdList"><code class="code">mkdir test-preprocessor</code> test-preprocessor est un dossier test nouvellement créé</li>
+					<li class="cmdList"><code class="code">cd test-preprocessor</code></li>
+					<li class="cmdList"><code class="code">compass create</code></li>
+					<li class="cmdList"><code class="code">subl.</code> <strong>sert à ouvrir le dossier en cours dans SublimeText</strong></li>
+				</ul>
+		        <p>Le Préprocesseur est un langage qui se compile pour générer un autre langage.</p>
+				<h3>Git / Compass</h3>
+				<ul>
+					<li class="cmdList"><code class="code">git init</code></li>
+					<li class="cmdList"><code class="code">git status</code></li>
+					<li class="cmdList"><code class="code">touch .gitignore</code></li>
+				</ul>
+		        <span class="caution">*Ne jamais versionner le cache*</span>
+		        <p>
+		            - Editer .gitignore avec SublimeTexte<br>
+		            - Ecrire: <code class="code">*-cache/</code>
+		        </p>
+				<ul>
+					<li class="cmdList"><code class="code">git status</code></li>
+					<li class="cmdList"><code class="code">git add -A</code></li>
+					<li class="cmdList"><code class="code">git commit -m "initialize repository"</code></li>
+		            <p>Pour compiler via le Terminal:</p>
+					<li class="cmdList"><code class="code">compass compile</code> ou bien <code class="code">compass watch</code></li>			
+				</ul>
+			</div>
+		</main>
+	</div>
+</body>
+</html>

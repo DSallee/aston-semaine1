@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Cours 5 - Semaine 1</title>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="wrapper">
+        <header>
+            <h1>Aston-Ecole - Semaine 1: Bower-Grunt-Compass</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Les indispensables d'un Développeur Web</a></li>
+                    <li><a href="page-2.html">Versionner un projet en équipe</a></li>    
+                    <li><a href="page-3.html">Compass | Framework CSS</a></li>
+                    <li><a href="page-4.html">Configuration SSH / GitHub et BitBucket</a></li>
+                    <li><a href="page-5.html">Rappel pour soumettre une branche</a></li>
+                </ul>
+            </nav>
+        </header>
+		<main>
+			<div class="chapitre">
+				<h2>Rappel pour soumettre une branche</h2>
+			</div>
+			<div class="content">
+				<ul>
+				    <li class="cmdList"><code class="code">git checkout -b branch_name</code></li>
+				    <li class="cmdList"><code class="code">git status</code> permet de voir les branches présentes.</li>
+				    <li class="cmdList"><code class="code">git diff</code> affiche les modifications (en rouge pour les éléments supprimés et en vert pour les éléments ajoutés).</li>
+				    <li class="cmdList"><code class="code">git add <span>path/to/file</span></code> ajoute les fichiers avec leur chemins.</li>
+				    <li class="cmdList"><code class="code">git commit -m "message"</code> message indiquant l'action effectuée</li>
+				    <li class="cmdList"><code class="code">git push origin branch_name</code></li>
+				</ul>
+				<h3>Effacer les fichiers inutiles "deleted: path/to/file"</h3>
+				<ul>
+				    <li class="cmdList"><code class="code">git rm path/to/file</code> efface le chemin des fichiers en deleted du git status.</li>
+				    <li class="cmdList"><code class="code">git commit -m "Remove unecessary file"</code>.</li>
+				    <li class="cmdList"><code class="code">git push origin branch_name</code>.</li>
+				</ul>
+				<p>Sur GitHub &rarr; <strong>Compare and Pull Request</strong> &rarr; Create Pull Request</p>
+				<h3>Gérer les conflits</h3>
+				<p>Récupérer toutes les branches sur le dépôts<br>
+					<code class="code">git fetch -p</code>
+				</p>
+			</div>
+		</main>
+	</div>
+</body>
+</html>

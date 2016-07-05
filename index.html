@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Aston-Ecole - Semaine 1</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Aston-Ecole - Semaine 1: Bower-Grunt-Compass</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Les indispensables d'un Développeur Web</a></li>
+                    <li><a href="page-2.html">Versionner un projet en équipe</a></li>    
+                    <li><a href="page-3.html">Compass | Framework CSS</a></li>
+                    <li><a href="page-4.html">Configuration SSH / GitHub et BitBucket</a></li>
+                    <li><a href="page-5.html">Rappel pour soumettre une branche</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="chapitre">
+                <h2>Les indispensables d'un Développeur Web</h2>
+            </div>
+            <div class="content">
+                <h3>Installation VM sous Ubuntu</h3>
+                <ul>
+                    <li class="li">VirtualBox</li>
+                    <li class="li">unbuntu-14.04.3-desktop-amd64.iso</li>
+                </ul>
+                <h3>Installation de Bower dans le terminal d'Ubuntu dans la VM</h3>
+                <p><strong>Bower</strong> (paquet NodeJS) : gestionnaire de paquets pour le web:<br>
+                &#45; Téléchage des librairies git/custom.<br>
+                &#45; Assure que les librairies sont à jour.<br>
+                &#45; Expose les dépendances des paquets.</p>
+                <ul>
+                    <li class="cmdList"><code class="code">sudo get-apt install nodejs-legacy npm git</code> node, npm and git (dépandances de bower)<br></li>
+                    <li class="cmdList"><code class="code">git config --global user.name "Username"</code> => correspond au username de Github</li>
+                    <li class="cmdList"><code class="code">git config --global user.email "email@"</code> => correspond à l'email associé à Github</li>
+                    <li class="cmdList"><code class="code">sudo npm install -g bower</code></li>
+                    <li class="cmdList"><code class="code">bower -v</code> permet d'indiquer la version de bower installé</li>
+                </ul>
+                <h3>GitHub (sous RubyOnRails)</h3>
+                <ul>
+                    <li class="li">Add Repository: Create Repository.</li>
+                    <li class="li">Suivre les directives de l'onglet HTTPS à l'aide du Terminal d'Ubuntu avec les lignes de commandes:</li>
+                        <ul>
+                            <li class="cmdList"><code class="code">git init</code></li>
+                            <li class="cmdList"><code class="code">git status</code></li>
+                            <li class="cmdList"><code class="code">git add</code></li>
+                            <li class="cmdList"><code class="code">git commit -m "Initialize repository"</code></li>
+                            <li class="cmdList"><code class="code">git remote add origin...</code></li>
+                            <li class="cmdList"><code class="code">git push -u origin master</code></li>
+                            <li class="cmdList"><code class="code">bower init</code></li>
+                        </ul>
+                    <li class="li">Appuyer sur Entrer jusqu'à la fin de la procédure.</li>
+                </ul>
+                <h3>Installation de Bootstrap à Bower</h3>
+                <ul>
+                    <li class="cmdList"><code class="code">bower install bootstrap --save</code> : Ajouter Bootstrap à bower.js</li>
+                    <li class="cmdList"><code class="code">bower install bootstrap --save-dev</code> : Ajouter une dépendance dev</li>
+                </ul>
+                <h3>Git &ne; Github : Qu'est ce que Git ?</h3>
+                <ul>
+                    <li>Git est un logiciel de versionning d'application.</li>
+                    <li>GitHub est une plateforme (de type Réseau Social) pour enregistrer les fichiers des applications avec toutes leurs versions.</li>
+                </ul>
+                <h3>Git Flow</h3>
+                <p><strong>Git Flow</strong> est un ensemble d'extensions git permettant des opérations de haut niveau sur un dépôt pour appliquer le modèle de branches.</p>
+                <h3>Création d'une branche (depuis le dossier du projet)</h3>
+                <ul>
+                    <li class="cmdList"><code class="code">git branch <span>branch_name</span></code> crée une branche "branch_name"</li>
+                    <li class="cmdList"><code class="code">git branch</code> permet de voir les branches présentes</li>
+                    <li class="cmdList"><code class="code">git checkout <span>branch_name</span></code> bascule sur la branche "branch_name"</li>
+                    <li class="cmdList"><code class="code">git diff</code> affiche les modifications (en rouge pour les éléments supprimés et en vert pour les éléments ajoutés)</li>
+                    <li class="cmdList"><code class="code">git checkout <span>file_name</span></code> enlève les modifications récentes</li>
+                </ul>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
+

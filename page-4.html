@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Cours 4 - Semaine 1</title>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="wrapper">
+        <header>
+            <h1>Aston-Ecole - Semaine 1: Bower-Grunt-Compass</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Les indispensables d'un Développeur Web</a></li>
+                    <li><a href="page-2.html">Versionner un projet en équipe</a></li>    
+                    <li><a href="page-3.html">Compass | Framework CSS</a></li>
+                    <li><a href="page-4.html">Configuration SSH / GitHub et BitBucket</a></li>
+                    <li><a href="page-5.html">Rappel pour soumettre une branche</a></li>
+                </ul>
+            </nav>
+        </header>
+		<main>
+			<div class="chapitre">
+				<h2>Configuration SSH / GitHub et BitBucket</h2>
+			</div>
+			<div class="content">
+				<h3>Etape 1: Vérifier la présence d'une "rsa key"</h3>
+				<ul>
+					<li class="cmdList"><code class="code">ls -al ~/ .ssh</code></li>		
+				</ul>
+				<h3>Etape 2: Générer une nouvelle "rsa key"</h3>
+				<ul>
+					<li class="cmdList"><code class="code">ssh-keygen -t rsa -b 4096 -C "dsallee.dev@gmail.com"</code></li>		
+					<li class="cmdList">Appuyer sur Entrée jusqu'à avoir la clé.</li>		
+				</ul>
+				<h3>Etape 3: Vérifier la présence du "shh agent"</h3>
+				<ul>
+					<li class="cmdList"><code class="code">eval "$(ssh-agent -s)"</code></li>		
+				</ul>
+				<h3>Etape 4: Ajouter la "rsa key" à son "ssh agent"</h3>
+				<ul>
+					<li class="cmdList"><code class="code">ssh-add ~/.ssh/id_rsa</code></li>		
+				</ul>
+				<h3>Etape 5: Copier la "public key"</h3>
+				<ul>
+					<li class="cmdList"><code class="code">subl ~/.ssh/id_rsa.pub</code></li>		
+					<li class="cmdList">Cette commande ouvrira SublimeText et copier le contenu</li>
+					<li class="cmdList">Sur GitHub &rarr; Settings &rarr; SSH Keys &rarr; New SSH Key</li>	
+					<li class="cmdList"><code class="code">ssh -T git@github.com</code></li>
+					<li class="cmdList">Répondre "Yes" en toute lettre</li>					
+				</ul>
+				<h2>Grunt : Javascript Task Runner</h2>
+				<h3>Installation de Grunt</h3>
+				<ul>
+					<li class="cmdList"><code class="code">sudo npm -g grunt-cli</code></li>		
+					<li class="cmdList"><code class="code">grunt -v</code></li>		
+				</ul>
+				<h3>Récupérer un projet GitHub d'un compte quelconque</h3>
+				<p>Utiliser <strong>Fork</strong> sur GitHub dans son <strong>Dépot</strong> (par exemple DSallee pour ma part)</p>
+				<h3>Récupérer le projet en local</h3>
+				<ul>
+					<li class="cmdList"><code class="code">git clone</code> (le SSH du repository project_name*)</li>		
+					<li class="cmdList"><code class="code">cd project_name/</code></li>		
+					<li class="cmdList"><code class="code">subl .</code> ouvre le projet dans SublimeText.</li>
+					*Le nom de votre projet
+					<li class="cmdList"><code class="code">git remote -v</code></li>
+					<li class="cmdList"><code class="code">git pull -r source master</code></li>
+					<li class="cmdList"><code class="code">npm install</code></li>
+					<li class="cmdList"><code class="code">grunt</code> execute toutes les tâches effectuer via un editeur / IDE.</li>
+				</ul>
+				<h3>Package Control de SublimeText 3</h3>
+				<ul>
+					<li><p>Aller sur <a href="http://packagecontrol.io/installation" target="_blank">packagecontrol.io/installation</a> et copier le contenu de l'onglet SublimeText 3 dans la console de SublimeText accessible dans <strong>View &rarr; Show console</strong>.</p></li>
+					<li><p>Dans <strong>Préférences &rarr; Package Control</strong><br>
+					 &rarr; Package Control: Install Package<br>
+					 &rarr; Sass</p></li>
+				</ul>
+			</div>
+		</main>
+	</div>
+</body>
+</html>
