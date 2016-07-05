@@ -1,3 +1,3 @@
-# aston-semaine1
-# Installation Bower - Grunt - Compass
-# Initiation de Git, Github, Compass/Sass
+# aston-semaine1: Bower - Grunt - Compass
+
+# Installation et Initiation de Git, Github, Bower/Grunt/Compass/Sass
